@@ -1,0 +1,59 @@
+{
+  "name": "hygen-apip-vue",
+  "version": "0.0.1",
+  "description": "Api Platform Hygen generator for Vue.js",
+  "author": "AlOneh (https://github.com/alOneh)",
+  "main": "index.js",
+  "keywords": [
+    "code-generator",
+    "hygen",
+    "vuejs",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alOneh/hygen-apip-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alOneh/hygen-apip-vue/issues"
+  },
+  "homepage": "https://github.com/alOneh/hygen-apip-vue#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.0",
+    "ejs-lint": "^0.3.0",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.9",
+    "hygen-add": "^1.0.5",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {
+    "@api-platform/api-doc-parser": "^0.8.0",
+    "@babel/runtime": "^7.0.0",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "fix": "eslint --fix src",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "npm run lint"
+  }
+}
